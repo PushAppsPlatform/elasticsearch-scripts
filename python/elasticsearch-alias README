@@ -1,5 +1,3 @@
-usage:
-
 elasticsearch-alias.py
 
 alias maintenance - remove old indices from alias and add new indices to the same alias, according to string and date filtering
