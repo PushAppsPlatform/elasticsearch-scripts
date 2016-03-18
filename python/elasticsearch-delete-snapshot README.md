@@ -13,16 +13,20 @@ However, The script will not delete any snapshot if there are no snapshot availa
 
   `python elasticsearch-delete-snapshot.sh  -r my_backup -o 30 -i 10 -t %Y%m%d`
 
-    Delete al snapshots in my_backup repository that are older than 30 days as long as we have snapshots from the last 10 days. Time filtering is done by the time string that should exist in the snapshot name.
+Delete al snapshots in my_backup repository that are older than 30 days as long as we have snapshots from the last 10 days. Time filtering is done by the time string that should exist in the snapshot name.
 
 #REQUIREMENTS:
 
 python
+
 pip : `sudo yum install python-pip`
+
 elasticsearch-py: `pip install elasticsearch`
+
 curator : `pip install elasticsearch-curator`
 
 [the aws cloud plugin](https://github.com/elastic/elasticsearch-cloud-aws)
+
 create an S3 repository:
 ```
 PUT _snapshot/testing
