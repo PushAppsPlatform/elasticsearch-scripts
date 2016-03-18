@@ -1,4 +1,4 @@
-**elasticsearch-alias.py**
+#elasticsearch-alias.py
 
 alias maintenance - remove old indices from alias and add new indices to the same alias, according to string and date filtering
 
@@ -7,19 +7,20 @@ alias maintenance - remove old indices from alias and add new indices to the sam
 `python ./elasticsearch-aliases.py --prefix <indices prefix> --alias <alias name> --timestring <timestring> --range <range in days> [OPTIONS]`
 
 #OPTIONS:
-  -- help          Show this message
-  
-  -- prefix        indices prefix to filter by (Required)
-  
-  -- alias         alias name to work on (Required)
-  
-  -- timestring    timestring format that should be part of the relevant indices name (Required)
-  
-  -- range         range in days to include new indices in the alias, and to exclude older indices from it (Required)
-  
-  -- host          Elasticsearch cluster host ( default :  localhost)
-  
-  -- port          Elasticsearch cluster port ( default : 9200)
+
+  -- help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Show this message
+
+  -- prefix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indices prefix to filter by (Required)
+
+  -- alias&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alias name to work on (Required)
+
+  -- timestring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timestring format that should be part of the relevant indices name (Required)
+
+  -- range&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; range in days to include new indices in the alias, and to exclude older indices from it (Required)
+
+  -- host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elasticsearch cluster host ( default :  localhost)
+
+  -- port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elasticsearch cluster port ( default : 9200)
 
 #EXAMPLES:
 

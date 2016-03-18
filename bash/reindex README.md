@@ -1,13 +1,13 @@
-**reindex.sh**
+#reindex.sh
 
 reindex data from one elasticsearch index to another
 
-#USAGE: 
+#USAGE:
 
 `reindex.sh -prefix <indices_prefix> -source <source_host> -target <target_host>`
 
-#OPTIONS:
-  - help          Show this message
+#OPTIONS:  
+\- help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this message
 
 
 #EXAMPLES:
@@ -19,4 +19,3 @@ this reindex data from all indices that start with the prefix article in http://
 #REQUIREMENTS:
 
 [elasticsearch-dump](https://github.com/taskrabbit/elasticsearch-dump) : `npm install elasticdump`
-
