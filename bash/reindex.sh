@@ -74,15 +74,11 @@ checkInputArguments() {
 
 main() {
   set +e
-  #echo curl -XGET $SOURCE/_cat/indices/$PREFIX?pretty=true | cut -d $' ' -f3
   list="$(curl -XGET $SOURCE/_cat/indices/$PREFIX?pretty=true -v | cut -d $' ' -f3)"
-  #list="$(curl -XGET http://52.5.223.179:9200)"
   for item in $list
   do
     echo "migrating" $item "..."
-    #"$(/usr/local/bin/elasticdump --input=$SOURCE/$item --output=$item.json --type=data)"
     "$(/usr/local/bin/elasticdump --bulk=true --output=$TARGET/$item --input=$SOURCE/$item)"
-    #rm -f $item.json
   done
 }
 
@@ -93,4 +89,3 @@ safeRunCommand "checkInputArguments"
 #1.
 #safeRunCommand "main"
 main
-
