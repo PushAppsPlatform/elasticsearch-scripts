@@ -1,4 +1,4 @@
-reindex.sh
+**reindex.sh**
 
 reindex data from one elasticsearch index to another
 
@@ -16,7 +16,7 @@ reindex data from one elasticsearch index to another
 
 this reindex data from all indices that start with the prefix article in http://localhost:9200 into http://domain.com:9200. only data is being reindexed.
 
-#requirements:
+#REQUIREMENTS:
 
 [elasticsearch-dump](https://github.com/taskrabbit/elasticsearch-dump) : `npm install elasticdump`
 
